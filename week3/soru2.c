@@ -13,23 +13,31 @@ int main()
         printf("dizinin %d . elemanini giriniz:",i+1);
         scanf("%d",&dizi[i]);
     }
-    sonuc= buyuk(dizi[x],x);
-    printf("%d",sonuc);
+
+    printf("%d",buyuk(dizi,x));
     return 0;
 }
 int buyuk(int dizi[],int i)
 {
-    int max=dizi[i];
-    if (i>=0)
-    {
-        if (dizi[i]>)
-        {
-            max=dizi[i];
-        
-        }else 
-        max=dizi[i+1];
-        
-    }
+    int y;
+   if (i==1)
+   {
+    return dizi[0];
+
+   }else{
+    y=buyuk(dizi,i-1);
+   }
+
+   if (y>dizi[i-1])
+   {
+    return y;
+   }else{
+    return dizi[i-1];
+   }
+   
+   
+    
+    
     
 
 }
